@@ -2,19 +2,21 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem "middleman", "~> 3.3.10"
+gem "middleman", "3.4.0"
+gem 'middleman-gh-pages'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
 # For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 # Deploy to GitHub Pages
-gem 'middleman-deploy', '~> 1.0'
+# gem 'middleman-deploy', '2.0.0.pre.alpha'
+# gem 'net-ssh', '2.10.1.rc1'
 
 # Assets
 gem 'jquery-middleman'
